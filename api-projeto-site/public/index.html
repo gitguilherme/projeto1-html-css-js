@@ -12,7 +12,7 @@
 <link rel="shortcut icon" href="https://i.imgur.com/wQCLaxq.png">
 </head>
 
-<body>
+<body onload="listarmetrica()">
     <div class="menu-principal">
         <main>
             <div class="header">
@@ -97,7 +97,7 @@
 
         <div class="about-text">
             
-                <!-- Vamos aprender a reciclar?
+                Vamos aprender a reciclar?
                 <h2>Faça a separação de descartes correta</h2><br>
                 <div class="space"></div>
 
@@ -110,9 +110,12 @@
             </div>
 
                 <div id="resp" style="display: none;">
+                    
+                </div> 
+                <div id="botaojogo" style="display:none;">
                     <button onclick="novarodada()">Nova rodada</button>
                 </div> 
-                 -->
+                
         </div>
     </div>
 </div>
@@ -280,11 +283,11 @@
         <div class="about-text">
 
             Fique por dentro!
-            <div id="login" style="display: block;">
-                <form id="form_login" method="post" onsubmit="return entrar()">
+            <div id="divlogin" style="display: block;">
+                <form id="login" method="post" onsubmit="return entrar()">
                     <h2>Achou interessante? Participe do fórum:</h2><br><br><br>
-                    Insira o seu email: <input type="email" name="iptemail1" id="idiptemail1" placeholder="  exemplo@exemplo.com"><br>
-                    Insira a sua senha: <input type="password" name="iptsenha1" id="idiptsenha1" placeholder="  *********"><br>
+                    Insira o seu email: <input type="email" name="email" id="idiptemail1" placeholder="  exemplo@exemplo.com"><br>
+                    Insira a sua senha: <input type="password" name="senha" id="idiptsenha1" placeholder="  *********"><br>
 
                     <button>Entrar</button><br>
 
@@ -292,18 +295,18 @@
                 </form>
                 <br><br>
                 Não Possui Login? Cadastre-se para participar:<br><br>
-                <button onclick="cadastrar()">Fazer Cadastro</button><br>
+                <button onclick="cadastro()">Fazer Cadastro</button><br>
 
             </div>
 
 
-            <div id="cadastro" style="display: none;">
-                <form action="">
+            <div id="divcadastro" style="display: none;">
+                <form id="cadastro" onsubmit="return cadastrar()">
                     <h2>Relize seu Cadastro:</h2><br>
-                    Insira o seu nome: <input type="text" name="iptnome" placeholder="  Nome"><br>
-                    Insira o seu email: <input type="email" name="iptemail2" placeholder="  exemplo@exemplo.com"><br>
-                    Insira a sua senha: <input type="password" name="iptsenha2" placeholder="  *********"><br>
-                    Confirme a sua senha: <input type="password" name="iptsenha3" placeholder="  *********"><br>
+                    Insira o seu nome: <input type="text" name="nome" placeholder="  Nome"><br>
+                    Insira o seu email: <input type="email" name="email" placeholder="  exemplo@exemplo.com"><br>
+                    Insira a sua senha: <input type="password" name="senha" placeholder="  *********"><br>
+                    Confirme a sua senha: <input type="password" name="confirmacaoSenha" placeholder="  *********"><br>
 
                     <button>Cadastrar</button><br>
 
@@ -329,8 +332,8 @@
                                     <button onclick="comentar()">Enviar</button>
                                 </form>
                             </div>
-                            <h1>Mural de Avisos</h1>
-                            <div class="div-results">
+                           <br> <h2>Comentários do fórum</h2><br>
+                            <div class="div-results" >
                                 <div id="feed_container" class="feed-container">
                                 </div>
                             </div>
@@ -338,16 +341,17 @@
                     </div>
             </div>
 
-            <br> <span id="metrica"></span>__ Pessoas já se cadastraram :) Participe também.
+            
         </div>
+        <br> <div id="metrica"></div>
     </div>
     </div>
-</div>
+</div> 
     <div class="space"></div>
 
     <div id="about">
         <div class="about-text">
-            <span>Chegou até aqui?!</span>
+            Chegou até aqui?!
             <h2>Participe do desafio:</h2><br>
             <p>Sorteie um desafio para ajudar a reduzir o lixo no mar: <br><br>
 
