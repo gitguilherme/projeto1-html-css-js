@@ -1,4 +1,25 @@
+// var grupo1 = ['<img src="https://i.imgur.com/fBDaV6B.png">','<img src="https://i.imgur.com/ud8uf6K.png">','<img src="https://i.imgur.com/JDTIXkD.png">','<img src="https://i.imgur.com/tsHCKmV.png">'];
+// var grupo2 = ['https://i.imgur.com/JFrB8GI.png','https://i.imgur.com/5zbL4NB.png','https://i.imgur.com/ZK0Vczu.png','https://i.imgur.com/yMyHrwZ.png'];
+// var grupo1 = ['1','2','3','4'];
+// var grupo2 = ['5','6','7','8'];
 
+// var mathg1 = grupo1(math.random()*4);
+// var mathg2 = grupo2(math.random()*(grupo2.length));
+
+
+// function descartar(){
+//     jogolixo.style.display = "none";
+//     resp.style.display = "block";
+
+//     resp.innerHTML = `${mathg1} e ${mathg2}`
+// }
+
+
+// function novarodada(){
+//     jogolixo.style.display = "block";
+//     resp.style.display = "none";
+
+// }
 
 function jogar() {
 
@@ -51,6 +72,23 @@ function cadastrar() {
 function logar() {
     login.style.display = "block";
     cadastro.style.display = "none";
+}
+function entrar(){
+    login.style.display = "none";
+    forum.style.display = "block";
+}
+function sair(){
+    login.style.display = "block";
+    forum.style.display = "none";
+    idiptemail1.value = '';
+    idiptsenha1.value = '';
+}
+function comentar(){
+    // if(){
+
+    // }else if(){
+
+    // }
 }
 
 function sortear() {

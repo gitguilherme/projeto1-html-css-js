@@ -1,10 +1,10 @@
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@294;300;608&display=swap');
 
 *{
     margin:0px;
     padding:0px;
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit", sans-serif;
     box-sizing: border-box; 
     scroll-behavior: smooth;
 }
@@ -61,7 +61,7 @@ main{
 
 .container{
     width: 100%;
-    height:93vh;
+    height:90vh;
     background-image: url(https://i.imgur.com/jzfxLks.jpg);
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -77,15 +77,14 @@ main{
     position: absolute;
     top: 50%;
     left: 27%;
-    transform: translate(-10%, -60%);
+    transform: translate(-10%, -50%);
     width: 800px;
  }
  
  
 
  .main-text h1{
-   
-    font-size: 2.3rem; 
+    
     color:#ffffff;
     text-align: center;
  
@@ -93,9 +92,9 @@ main{
 
 
  .main-text p{
-     font-size: 0.9rem;
      color:#ffffff;
      margin-top: 10px;
+     font-size: 2rem; 
  
  }
 
@@ -153,15 +152,21 @@ main{
 }
 
 .form{
-    font-size: 0.9rem;
     color:#ffffff;
     margin-top: 10px;
 
 }
 
+.div-results {
+    width: 100%;
+}
+
+.div-results .feed-container {
+    border-radius: 5px;
+    margin-bottom: 80px;
+}
 
 .footer{
-    font-size: 0.9rem;
     color:#ffffff;
     margin-top: 10px;
     height: 80px;
@@ -179,9 +184,6 @@ main{
 
    
 }
-
-
-
 
 
 /**/

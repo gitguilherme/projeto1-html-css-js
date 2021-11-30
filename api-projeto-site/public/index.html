@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto FInal</title>
+    <title>Não existe 'fora'</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 <!-- Fav Icon -->
-<link rel="shortcut icon" href="/images/fav-icon.png">
+<link rel="shortcut icon" href="https://i.imgur.com/wQCLaxq.png">
 </head>
 
 <body>
@@ -96,7 +96,23 @@
         </div>
 
         <div class="about-text">
-            ---
+            
+                <!-- Vamos aprender a reciclar?
+                <h2>Faça a separação de descartes correta</h2><br>
+                <div class="space"></div>
+
+                
+                <div id="jogolixo" style="display: block;">
+                <p>Clique no botão para realizar a reciclagem:</p><br>
+                <button onclick="descartar()">Descarte</button>
+                <div class="space"></div>
+                <div class="space"></div>
+            </div>
+
+                <div id="resp" style="display: none;">
+                    <button onclick="novarodada()">Nova rodada</button>
+                </div> 
+                 -->
         </div>
     </div>
 </div>
@@ -265,10 +281,10 @@
 
             Fique por dentro!
             <div id="login" style="display: block;">
-                <form action="">
+                <form id="form_login" method="post" onsubmit="return entrar()">
                     <h2>Achou interessante? Participe do fórum:</h2><br><br><br>
-                    Insira o seu email: <input type="email" name="iptemail1" placeholder="  exemplo@exemplo.com"><br>
-                    Insira a sua senha: <input type="password" name="iptsenha1" placeholder="  *********"><br>
+                    Insira o seu email: <input type="email" name="iptemail1" id="idiptemail1" placeholder="  exemplo@exemplo.com"><br>
+                    Insira a sua senha: <input type="password" name="iptsenha1" id="idiptsenha1" placeholder="  *********"><br>
 
                     <button>Entrar</button><br>
 
@@ -295,6 +311,33 @@
                 <button onclick="logar()">Fazer Login</button><br>
             </div>
 
+            <div id="forum" style="display: none;">
+                <div class="dash-right">
+                    <div class="avisos">
+                        
+                            <h1>Publicar um aviso</h1>
+                            <div class="div-form">
+                                <form id="form_postagem" method="post" onsubmit="return publicar()">
+                                    Título:
+                                    <br>
+                                    <input name="titulo" id="titulo" maxlength="100" type="text">
+                                    <br>
+                                    Descrição (máximo de 250 caracteres):
+                                    <br>
+                                    <textarea name="descricao" id="textarea_descricao" maxlength="250" rows="5"></textarea>
+                                    <br>
+                                    <button onclick="comentar()">Enviar</button>
+                                </form>
+                            </div>
+                            <h1>Mural de Avisos</h1>
+                            <div class="div-results">
+                                <div id="feed_container" class="feed-container">
+                                </div>
+                            </div>
+                        <br><button onclick="sair()">Sair</button>
+                    </div>
+            </div>
+
             <br> <span id="metrica"></span>__ Pessoas já se cadastraram :) Participe também.
         </div>
     </div>
@@ -305,7 +348,7 @@
     <div id="about">
         <div class="about-text">
             <span>Chegou até aqui?!</span>
-            <h2>Participe do desafio:</h2>
+            <h2>Participe do desafio:</h2><br>
             <p>Sorteie um desafio para ajudar a reduzir o lixo no mar: <br><br>
 
             </p>
@@ -320,12 +363,12 @@
     <!-- Contato -->
 <div id="Contato">
     <div class="footer">
-        Guilherme Vazquez Garcia  2021
+        Guilherme Vazquez Garcia  •  2021
         <a href="https://github.com/gitguilherme"><img src="https://i.imgur.com/23ugz0h.png" alt="github"></a>
         <a href="https://www.linkedin.com/in/guilherme-vazquez-garcia-a02abb124/"><img
                 src="https://i.imgur.com/7VNy1uQ.png" alt="linkedin"></a>
         <a href="mailto:guilherme.vazquez@outlook.com"><img src="https://i.imgur.com/htr4Pjk.png" alt="email"></a>
-        <!-- https://webcache.googleusercontent.com/search?q=cache:MHka1oIRO5UJ:https://www.iberdrola.com/meio-ambiente/as-5-ilhas-de-lixo-nos-oceanos+&cd=1&hl=pt-BR&ct=clnk&gl=br -->
+        <!--  -->
             <!-- https://www.youtube.com/watch?v=o3-Fa7GPBVg -->
     </div>
 </div>
