@@ -1,7 +1,6 @@
 var grupo1 = ['https://i.imgur.com/fBDaV6B.png','https://i.imgur.com/ud8uf6K.png','https://i.imgur.com/JDTIXkD.png','https://i.imgur.com/tsHCKmV.png'];
 var grupo2 = ['https://i.imgur.com/JFrB8GI.png','https://i.imgur.com/5zbL4NB.png','https://i.imgur.com/ZK0Vczu.png','https://i.imgur.com/yMyHrwZ.png'];
-var mathg1 = grupo1[parseInt(Math.random()*4)];
-var mathg2 = grupo2[parseInt(Math.random()*4)];
+
 
 
 function descartar(){
@@ -9,11 +8,25 @@ function descartar(){
     resp.style.display = "block";
     botaojogo.style.display = "block";
 
-    resp.innerHTML = `<img src="${mathg1}"> <br> <img src="${mathg2}">`
+    var numeros1 = parseInt(Math.random()*4)
+    var numeros2 = parseInt(Math.random()*4)
+
+    var mathg1 = grupo1[numeros1];
+    var mathg2 = grupo2[numeros2];
+    console.log(mathg1);
+    console.log(mathg2);
+
+    resp.innerHTML = `<img src="${mathg1}" style="width: 90px;">  <img src="${mathg2}" style="width: 90px;">`
+
+    if(numeros1 == numeros2){
+        setTimeout(function(){alert("Oba! Você reciclou corretamente :)")},400);
+    }else{
+        setTimeout(function(){alert("Poxa, tente novamente! O meio ambiente agradece.")},400);
+    }
+
 }
 
-
-function novarodada(){
+function retornar(){
     jogolixo.style.display = "block";
     resp.style.display = "none";
     botaojogo.style.display = "none";
@@ -344,7 +357,7 @@ function listarmetrica(){
                 
                 for (var i = 0; i < resposta.length; i++){
                     var arquivo = resposta[i];
-                    metrica.innerHTML = `${arquivo.qntdUsuarios} Pessoas já se cadastraram. Participe também.`;
+                    metrica.innerHTML = `<b>${arquivo.qntdUsuarios} Pessoas já se cadastraram.</b> Participe também :) `;
                 }
                 
             });

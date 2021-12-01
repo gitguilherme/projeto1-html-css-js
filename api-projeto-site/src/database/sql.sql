@@ -16,3 +16,11 @@ foreign key (fkUsuario) references Usuario (idUsuario));
 
 select * from Usuario;
 select * from aviso;
+
+insert into Usuario values
+(null, 'Carlos Henrique','carlos@gmail.com','carlos123'),
+(null, 'Mariana Clara','mariana@gmail.com','mariana123');
+
+insert into Aviso (titulo, descricao, fkUsuario) values
+('Muito Impactante!','Entender um pouco mais sobre essas ilhas de lixo me fizeram repensar em algumas atitudes.',1),
+('Quero entender mais sobre...','Caso alguém esteja disponível para conversar sobre, meu email é mariana@gmail.com',2);
